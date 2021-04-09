@@ -40,9 +40,31 @@ word-break:break-word;
 :hover{
     background-color: #e9eaeb;
 }
+
+@media(max-width:764px){
+   >p{
+  width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; 
+   }
+   padding:10px;
+
+}
+
+
 `;
 const UserAvatar = styled(Avatar)`
 margin:5px;
 margin-right:15px;
+@media(max-width:764px){
+    margin-right:10px;
+   &&&{
+       height:30px;
+       width:30px;
+   } 
+
+    
+}
 
 `;

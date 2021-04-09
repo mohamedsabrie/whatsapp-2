@@ -59,7 +59,7 @@ function Sidebar() {
 export default Sidebar;
 const Container = styled.div`
 flex:0.45;
-min-width:300px;
+min-width:150px;
 max-width:350px;
 height:100vh;
 border-right:1px solid whitesmoke;
@@ -92,11 +92,21 @@ cursor:pointer;
 }
 
 `;
-const IconsContainer = styled.div``;
+const IconsContainer = styled.div`
+@media(max-width:764px){
+   >.MuiIconButton-root:last-child{
+        display:none;
+    }
+}
+`;
 const Search = styled.div`
 display:flex;
 align-items:center;
 padding:20px;
+@media(max-width:764px){
+   padding:10px;
+}
+
 `;
 const SearchInput = styled.input`
 outline:none;
@@ -108,6 +118,11 @@ width:100%;
 &&&{
     border-top:1px solid whitesmoke;
     border-bottom:1px solid whitesmoke;
+}
+@media(max-width:764px){
+    &&&{
+        font-size:13px;
+    }
 }
 `;
 
