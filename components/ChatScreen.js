@@ -14,6 +14,7 @@ import { useState } from 'react';
 import getRecipientEmail from '../utility/getRecipientEmail';
 import TimeAgo from 'timeago-react';
 import { useRef } from 'react';
+import { useEffect } from 'react';
 
 function ChatScreen({ messages, chat }) {
   const [user] = useAuthState(auth);
@@ -29,7 +30,11 @@ function ChatScreen({ messages, chat }) {
       behavior: "smooth",
       block: "start"
     })
-  }
+  };
+  useEffect(() => {
+    scrollToBottom()
+    
+  }, [])
   const sendMessage =(e)=>{
     
    e.preventDefault();
